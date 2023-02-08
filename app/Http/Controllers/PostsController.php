@@ -47,9 +47,7 @@ class PostsController extends Controller
     {
         $id=12;
         $title="Awesome Stuff";
-         return view('posts/blog', compact('id', 'title'));
-         // another way
-     /*     return view('posts/blog')->with(['id'=>$id, 'title'=>$title]); */
+        return view('posts/blog', compact('id', 'title'));
     }
 
     /**
