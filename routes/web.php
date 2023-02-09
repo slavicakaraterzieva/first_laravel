@@ -23,4 +23,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/about', [App\Http\Controllers\PagesController::class, 'index'])->name('about');
 
-Route::get('/blog/{id}', [App\Http\Controllers\PostsController::class, 'show'])->name('blog');
+ 
+Route::get('/contact', [App\Http\Controllers\PagesController::class, 'contact'])->name('contact');
+
+Route::resource('/post', 'App\Http\Controllers\PostsController');
+
+// Route::get('/create', [App\Http\Controllers\PostsController::class, 'create'])->name('create');
