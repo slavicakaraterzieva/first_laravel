@@ -42,18 +42,24 @@ class PostsController extends Controller
             ['body'=>'required'],
             //dd($request->all()),
     );
-      $title = $request->input('title');
-    
+         //one way to save to database
+      /* $title = $request->input('title');
       $body = $request->input('body');
-      
-      $user = Auth::user();
-
+      $user = Auth::user(); 
       $post = new Post();
       $post->title = $title;
       $post->body = $body;
       $post->user_id = $user->id;
-      $post->save();
+      $post->save(); */
       //dd($user->id);
+
+      //other way to save to database preferred
+      $user = Auth::user();
+      $input = $request->all();
+      $body = strip_tags($request->input('body'));
+    
+       $user->posts()->create($input);
+      return redirect()->route('post.index'); 
     }
 
     /**
