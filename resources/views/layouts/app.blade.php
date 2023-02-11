@@ -18,7 +18,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <script type="text/javascript"
+ src="https://cdn.tiny.cloud/1/41o26xewovprtht6iv42qiylk1iwjz82y3ihfxy07i7xftiz/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
+@yield('scripts')
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -76,6 +80,11 @@
         </nav>
 
         <main class="py-4">
+            <div class="row">
+                <div class="col-md-8  offset-2">
+                    @include('includes.message')
+                </div>
+            </div>
             @yield('content')
         </main>
     </div>

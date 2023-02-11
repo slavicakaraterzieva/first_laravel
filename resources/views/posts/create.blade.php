@@ -5,8 +5,6 @@
     <div class="col-md-8 offset-2">
 <h1>Create Post</h1>
 
-@include('includes.message')
-
 {!! Form::open(['action' => 'App\Http\Controllers\PostsController@store', 'method' => 'POST'])!!}
 @csrf
 <div class="col-md-6">
