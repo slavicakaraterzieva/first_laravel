@@ -11,6 +11,7 @@
                 <th scope="col">Title</th>
                 <th scope="col">Body</th>
                 <th scope="col">Edit</th>
+                <th scope="col">View</th>
                 <th scope="col">Delete</th>
               </tr>
             </thead>
@@ -22,6 +23,7 @@
                     <td>{{$post->title}}</td>
                     <td>{{$post->body}}</td>
                     <td><a href="{{route('post.edit', $post->id)}}" class="btn btn-dark">Edit</a></td>
+                    <td><a href="{{route('post.show', $post->id)}}" class="btn btn-dark">View</a></td>
                     <td><a href="{{route('post.destroy', $post->id)}}" class="btn btn-dark">Delete</a></td>
                   </tr>      
                 @endforeach
@@ -29,7 +31,7 @@
                 @endif
             </tbody>
           </table>
-
+          <a href="{{route('home')}}" class="btn btn-dark">Back To Dashboard</a>
     </div>
 </div>
  

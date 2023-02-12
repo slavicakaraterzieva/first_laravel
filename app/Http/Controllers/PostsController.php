@@ -71,9 +71,8 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        $id=12;
-        $title="Awesome Stuff";
-        return view('posts', compact('id', 'title'));
+       $post = Post::findOrFail($id);
+       return view('posts.show', compact('post'));
     }
 
     /**

@@ -18,10 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-    <script type="text/javascript"
- src="https://cdn.tiny.cloud/1/41o26xewovprtht6iv42qiylk1iwjz82y3ihfxy07i7xftiz/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-</head>
+ 
+</head>   
 @yield('scripts')
 <body>
     <div id="app">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -12,6 +13,12 @@ class PagesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+    {
+        $posts = Post::all();
+        return view ('index', compact('posts'));
+    }
+
+    public function about()
     {
         return view ('pages/about');
     }

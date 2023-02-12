@@ -17,8 +17,8 @@
                     {{ __('Welcome'. ' ' .$user->name) }}
 
                     <div class="flex justify-content-around mt-5">
-                        <a href="{{'/create'}}" class="btn btn-info">Create Posts</a>
-                        <a href="{{'/post'}}" class="btn btn-success">View Posts</a>
+                        <a href="{{'post/create'}}" class="btn btn-secondary">Create Posts</a>
+                        <a href="{{'/post'}}" class="btn btn-secondary">View Posts</a>
                     </div> 
                 </div>
             </div>

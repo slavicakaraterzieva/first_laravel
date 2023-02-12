@@ -13,19 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */
 
 Auth::routes();
 
+Route::get('/', [App\Http\Controllers\PagesController::class, 'index'])->name('index');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/about', [App\Http\Controllers\PagesController::class, 'index'])->name('about');
+Route::get('/about', [App\Http\Controllers\PagesController::class, 'about'])->name('about');
 
  
 Route::get('/contact', [App\Http\Controllers\PagesController::class, 'contact'])->name('contact');
 
 Route::resource('/post', 'App\Http\Controllers\PostsController');
-
-// Route::get('/create', [App\Http\Controllers\PostsController::class, 'create'])->name('create');
