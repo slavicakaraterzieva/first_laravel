@@ -24,7 +24,19 @@
                     <td>{{$post->body}}</td>
                     <td><a href="{{route('post.edit', $post->id)}}" class="btn btn-dark">Edit</a></td>
                     <td><a href="{{route('post.show', $post->id)}}" class="btn btn-dark">View</a></td>
-                    <td><a href="{{route('post.destroy', $post->id)}}" class="btn btn-dark">Delete</a></td>
+                    <td>
+                      {!! Form::open(['action' => ['App\Http\Controllers\PostsController@destroy', $post->id], 'method' => 'POST'])!!}
+@csrf
+@method('DELETE')
+{{-- {!! Form::hidden('_method','PUT')!!} --}}
+
+{{-- button --}}
+<div class="form-group">
+    {!! Form::submit('Delete',['class'=>'btn btn-dark'])!!}   
+</div>
+
+{!! Form::close() !!}
+                    </td>
                   </tr>      
                 @endforeach
                   @else  <h1>There are no posts to show yet!</h1>

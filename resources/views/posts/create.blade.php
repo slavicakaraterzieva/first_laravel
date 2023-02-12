@@ -18,7 +18,7 @@
 {{-- body --}}
 <div class="form-group mt-5">
     {!! Form::label('body','Enter Text')!!}
-    {!! Form::textarea('body',null,['id'=>'myTextarea'],['class'=>'torm-control','rows'=>6, 'cols'=>20 ])!!}
+    {!! Form::textarea('body',null,['id'=>'myTextarea'],['class'=>'torm-control','rows'=>200, 'cols'=>500 ])!!}
 </div>
 
 {{-- button --}}

@@ -10,6 +10,8 @@
     <div class="col-md-8 offset-2">
         <h1>{{$post->body}}</h1>
     </div>
+    @if($post->id)
     <a href="{{route('home')}}" class="btn btn-secondary">Back To Dashboard</a>
+    @endif
 </div>
 @endsection

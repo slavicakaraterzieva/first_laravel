@@ -9,3 +9,14 @@
 @endforeach
 
 @endif
+
+@if(session('success'))
+<div class="alert alert-success">
+    {{session('success')}}
+</div>
+
+@else
+<div class="alert alert-error">
+    {{session('error')}}
+</div>
+@endif
