@@ -14,7 +14,9 @@ class PagesController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        //$posts = Post::all();
+        //$posts = Post::paginate(6);
+        $posts = Post::orderBy('id', 'DESC')->paginate(6);
         return view ('index', compact('posts'));
     }
 
