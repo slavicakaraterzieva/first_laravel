@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Models;
-
+use DB;
+use App\Quotation;
 use App\Models\Post;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -46,5 +47,7 @@ class User extends Authenticatable
       //relationships for database
       public function posts(){
         return $this->hasMany(Post::class);
+
     }
+
 }
