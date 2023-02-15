@@ -14,9 +14,9 @@
     <div class="col-md-4 mb-4">
         <div class="card card-secondary" style="width: 18rem; height: 10rem;">
             <div class="card-body">
-              <h5 class="card-title">{{$post->title}}</h5>
+              <h5 class="card-title"><i>{{$post->title}}</i></h5>
               <div style="width: 100%; height: 4rem; overflow:hidden">
-                <p class="card-text">{{$post->body}}</p>
+                <p class="card-text">“{{$post->body}}„</p>
               </div>
               <a href="{{route('post.show', $post->id)}}" class="btn btn-dark" style="fixed-bottom;">View Post</a>
             </div>
