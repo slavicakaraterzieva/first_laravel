@@ -30,6 +30,8 @@ Route::get('/contact', [App\Http\Controllers\PagesController::class, 'contact'])
 
 Route::resource('/post', 'App\Http\Controllers\PostsController');
 
+Route::get('/post', [App\Http\Controllers\PostsController::class, 'index'])->name('/post');
+
 Route::get('/post', [App\Http\Controllers\PostsController::class, 'all_data'])->name('/post');
 
 

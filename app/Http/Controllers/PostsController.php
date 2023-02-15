@@ -80,7 +80,7 @@ class PostsController extends Controller
       $body = strip_tags($request->input('body'));
     
        $user->posts()->create($input);
-      return redirect()->route('post.index')->with('success', 'Post Created'); 
+      return redirect()->route('index')->with('success', 'Post Created'); 
     }
 
     /**
@@ -136,7 +136,7 @@ class PostsController extends Controller
       $post->body = $body;
       $post->save();
     
-      return redirect()->route('post.index')->with('success', 'Post Edited'); 
+      return redirect()->route('index')->with('success', 'Post Edited'); 
     }
 
     /**
@@ -149,6 +149,6 @@ class PostsController extends Controller
     {
         $post = Post::findOrFail($id);
         $post->delete();
-        return redirect()->route('post.index')->with('success', 'Post Deleted');
+        return redirect()->route('index')->with('success', 'Post Deleted');
     }
 }
