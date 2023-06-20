@@ -21,7 +21,7 @@
  
 </head>   
 @yield('scripts')
-<body>
+<body style = "background-image:url('https://th.bing.com/th/id/OIP.AxeaZBsDY76f_glSwwPCCQHaEK?w=323&h=181&c=7&r=0&o=5&pid=1.7'); background-repeat:no-repeat; width:100%; height:100%; background-size:cover; bacground-position:center; bacground-color:#cccc; overflow-x: hidden;">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
